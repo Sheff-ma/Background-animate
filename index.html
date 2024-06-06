@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Animate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="slider()">
+    <div class="banner">
+        <div class="slider">
+            <img src="img\wallhaven-1kqq29.png" id="slideImg">
+        </div>
+        <div class="overlay">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="img\LOGO.png" alt="">
+                </div>
+                <div class="menu-icon">
+                    <img src="img\Home.png" alt="">
+                    <img src="img\Location.png" alt="">
+                    <img src="img\options.png" alt="">
+                </div>
+            </div>
+            <div class="content">
+                <h1>LET'S DESIGN WITH SH3FF</h1>
+                <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed reprehenderit ducimus quae, facilis ad recusandae eos, mollitia, 
+                    sunt harum illo nam. Cupiditate veniam dignissimos rerum ex rem, dolorum reiciendis voluptas.</h3>
+                    <button type="button">WATCH MORE</button>
+                    <button type="button" class="btn2">SUBSCRIBE</button>
+                </div>
+        </div>
+
+    </div>
+    <script>
+        var slideImg= document.getElementById("slideImg");
+        var images= new Array (
+            "img/cyberpunk-2077-japanese-demon-art-x91ae85qkzvscrii.jpg",
+            "img/Messing around with Spiddy.jpg",
+            "img/wallhaven-0pweke.jpg",
+            "img/wallhaven-1kqq29.png",
+            "img/wallhaven-28zrxx.jpg",
+            
+        );
+
+        var len= images.length;
+        var i= 0;
+
+        function slider(){
+            if (i> len-1){
+                i=0;
+            }
+            slideImg.src=images[i];
+            i++;
+            setTimeout('slider()', 3000);
+        }
+    </script>
+</body>
+</html>
